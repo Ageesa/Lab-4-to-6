@@ -99,19 +99,20 @@ console.log(`Area of a circle with radius ${radiusOfCircle}cm is ${areaOfCircle(
 //      3. Calculate the area of a circle with the result of #2 as the radius.   
 //      4. Calculate what percentage that area (#3) is of the squared result (#2).
 function runAll(h) {
-    let x = halfNumber(h)
-    let y = squareNumber(x)
-    let z = areaOfCircle(y)
-    let p = percentOf(z,y)
+  
     console.log (`half of ${h} is ${x}, square of ${x} is ${y}, area of circle withradius ${y} is ${z}, and ${z} is ${p}% of ${y}.`)
     return x, y
 }
 let someNum= 12
-
-
+let x = halfNumber(someNum)
+let y = squareNumber(x)
+let z = areaOfCircle(y)
+let p = percentOf(z,y)
+document.querySelector(".ex10").innerHTML = `Half of ${someNum} is ${x}, square of ${x} is ${y}, area of circle with radius ${y} is ${z}, and ${z} is ${p}% of ${y}.`
+runAll(someNum)
 //LAB 6//
 //In HTML, create an <ol>
 //Within the ordered-list, add 10 <li>
 //Give each list-item a unique id (ex1, ex2, etc, for example)
 //Instead of outputting to the console, put the string output from the previous 10 exercises to the document, with each string of output going into its own list item. (There are a few ways to write this solution, consideration given to methods that are more efficient - as long as they're still readable and logical)
-runAll(someNum)
+
